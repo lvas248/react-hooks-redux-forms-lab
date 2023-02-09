@@ -7,9 +7,12 @@ const bandsSlice = createSlice({
   },
   reducers: {
     // create reducer methods
+    bandAdded(state, action){
+      state.entities.push(action.payload)
+    }
   },
 });
 
 // export the action creators
-
+export const { bandAdded } = bandsSlice.actions
 export default bandsSlice.reducer;
